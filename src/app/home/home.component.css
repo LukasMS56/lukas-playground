@@ -1,0 +1,57 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  cursor: pointer;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.mat-card-title{
+  color: #BCF7F6;
+}
+
+.mat-card-image{
+  object-fit: cover;
+  height: 226px;
+  margin: 0 0 0 -16px;
+}
+
+.mat-card-actions{
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.mat-card:hover{
+  border-width: 2px;
+  border-style: solid;
+  border-color: #BCF7F6;
+}
+
+#search-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: inherit;
+}
+#search-card:hover{
+  border: none;
+}
+app-article-search{
+  width: 66%;
+}
+
