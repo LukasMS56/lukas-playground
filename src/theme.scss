@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$lukas-playground-primary: mat-palette($mat-cyan, 100);
+$lukas-playground-accent:  mat-palette($mat-cyan, 100);
+$lukas-playground-warn:    mat-palette($mat-red);
+$lukas-playground-foreground: mat-palette($mat-cyan, 100);
+
+$dark-theme: mat-dark-theme((
+    color: (
+        primary: $lukas-playground-primary,
+        accent: $lukas-playground-accent,
+        warn: $lukas-playground-warn,
+    )
+));
+
+@include angular-material-theme($dark-theme);
+

@@ -13,7 +13,6 @@
       <a mat-list-item 
         (click)="drawer.toggle()"
         href="mailto:idontwantno@spam.de">Contact Me</a>
-      <a mat-list-item href="#">Link 3</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,7 +22,8 @@
         aria-label="Home Button"
         mat-icon-button
         routerLink=''
-        *ngIf="!(isHandset$ | async)">
+        *ngIf="!(isHandset$ | async)"
+        color="primary">
       <mat-icon aria-label="Home Button Icon">home</mat-icon>
       </button>
       <button
@@ -31,20 +31,22 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="(isHandset$ | async)">
+        *ngIf="(isHandset$ | async)"
+        color="primary">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span class="navbar-spacer"></span>
-      <span class="title">lukas-playground</span>
+      <a class="title" [routerLink]="['']">lukas-playground</a>
       <span class="navbar-spacer"></span>
       <span id="contactDescription"
-        *ngIf="!(isHandset$ | async)" >Contact Me</span>
+        *ngIf="!(isHandset$ | async)">Contact Me</span>
       <a
         id="mailMe"
         aria-label="Contact Me Button"
         mat-icon-button
         href="mailto:idontwantno@spam.de"
-        *ngIf="!(isHandset$ | async)">
+        *ngIf="!(isHandset$ | async)"
+        color="primary">
         <mat-icon aria-label="Contact Me Button Icon">email</mat-icon>
       </a>
     </mat-toolbar>

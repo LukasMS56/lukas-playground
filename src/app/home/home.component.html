@@ -18,20 +18,25 @@
     </mat-form-field>
   </form>
   <mat-grid-list cols="2" rowHeight="350px">
-    <div *ngFor="let card of cards | async">
-      <mat-grid-tile *ngIf="tempString.includes(card.title)" [colspan]="card.cols" [rowspan]="card.rows">
-        <mat-card class="dashboard-card" [routerLink]="['article', card.title]">
-          <mat-card-header>
-            <mat-card-title>
-              {{card.title}}
-            </mat-card-title>
-          </mat-card-header>
-          <img mat-card-image [src]="card.image" alt="Bild zu {{card.title}}">
-          <mat-card-actions>
-            <button mat-button>Read more</button>
-          </mat-card-actions>
-        </mat-card>
-      </mat-grid-tile>
+    <div *ngIf="tempString.length; else noResults">
+      <div *ngFor="let card of cards | async">
+        <mat-grid-tile *ngIf="tempString.includes(card.title)" [colspan]="card.cols" [rowspan]="card.rows">
+          <mat-card class="dashboard-card" [routerLink]="['article', card.title]">
+            <mat-card-header>
+              <mat-card-title>
+                {{card.title}}
+              </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="card.image" alt="Bild zu {{card.title}}">
+            <mat-card-actions>
+              <button mat-button>Read more</button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+      </div>  
     </div>
+    <ng-template #noResults>
+      No Article Found.
+    </ng-template>
   </mat-grid-list>
 </div>

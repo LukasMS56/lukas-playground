@@ -47,7 +47,7 @@ export class HomeComponent {
   constructor(private breakpointObserver: BreakpointObserver) {}
   
   filteredOptions: Observable<string[]>;
-  tempString: string[] = ['default'];
+   private tempString: string[] = ['default'];
 
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges

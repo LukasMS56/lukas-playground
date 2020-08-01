@@ -1,5 +1,6 @@
 .grid-container {
   margin: 20px;
+  color: #b2ebf2;
 }
 
 .dashboard-card {
@@ -9,6 +10,7 @@
   right: 15px;
   bottom: 15px;
   cursor: pointer;
+  color: #b2ebf2;
 }
 
 .more-button {
@@ -19,10 +21,6 @@
 
 .dashboard-card-content {
   text-align: center;
-}
-
-.mat-card-title{
-  color: #BCF7F6;
 }
 
 .mat-card-image{

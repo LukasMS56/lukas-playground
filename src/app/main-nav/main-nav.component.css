@@ -21,14 +21,15 @@
   display: none;
 }
 
-.title{
+.title, .title:visited{
   font-size: 35px;
-  color: #BCF7F6;
   align-self: center;
+  text-decoration: none;
+  color: #b2ebf2;
 }
 .mat-toolbar{
   display: flex;
-  color: #BCF7F6;
+  color: #b2ebf2;
 }
 
 .navbar-spacer{
