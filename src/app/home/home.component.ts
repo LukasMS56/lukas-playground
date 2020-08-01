@@ -4,6 +4,7 @@ import { ARTICLES } from '../offline-articles';
 import { FormControl } from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import { async } from 'rxjs/internal/scheduler/async';
 
 @Component({
   selector: 'app-home',
@@ -46,6 +47,7 @@ export class HomeComponent {
   constructor(private breakpointObserver: BreakpointObserver) {}
   
   filteredOptions: Observable<string[]>;
+  tempString: string[] = ['default'];
 
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges
@@ -57,7 +59,7 @@ export class HomeComponent {
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-
+    this.tempString = this.options.filter(option => option.toLowerCase().includes(filterValue));
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 

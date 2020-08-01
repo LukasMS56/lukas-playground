@@ -9,8 +9,7 @@
   },
   "files": [
     "src/test.ts",
-    "src/polyfills.ts",
-    "./src/app/article-search/ArticleSearchComponent.ts"
+    "src/polyfills.ts"
   ],
   "include": [
     "src/**/*.spec.ts",

@@ -21,7 +21,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { ArticleSearchComponent } from './article-search/article-search.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { ArticleSearchComponent } from './article-search/article-search.componen
     ArticleComponent,
     MainNavComponent,
     HomeComponent,
-    ArticleSearchComponent,
   ],
   imports: [
     BrowserModule,

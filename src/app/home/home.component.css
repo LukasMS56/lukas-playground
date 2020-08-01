@@ -42,16 +42,10 @@
   border-color: #BCF7F6;
 }
 
-#search-card{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: inherit;
-}
-#search-card:hover{
-  border: none;
-}
-app-article-search{
+.search-form {
   width: 66%;
+  margin: auto;
 }
-
+mat-form-field{
+  display: inline;
+}
